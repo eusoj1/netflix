@@ -1,0 +1,202 @@
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*elementos base*/
+
+}
+body {
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial black',Times;
+    font-size: 40px;
+
+}
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+header nav a:hover{ 
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/imgcapa.jpg'); /* linear gradiente =colocar um camada de cor, gradiente preto na img */
+    
+    height: 440px;
+    background-size: cover; /*para pegar a area de cobertura da pagina, a img fica de um lado a outro*/
+    margin-top: cm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /*width: 850px; para quebrar o texto, basta alterar a largura*/
+
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer; /* para mostra que é um botão quando o cursor passar em cima do botao*/
+    transition: .3s ease all; /* animação para quando o cursou passar em cima do cursor*/
+    margin-top: 10px;
+}
+
+.botao2{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer; /* para mostra que é um botão quando o cursor passar em cima do botao*/
+    transition: .3s ease all; /* animação para quando o cursou passar em cima do cursor*/
+    margin-top: 10px;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+
+    /* para qunado passar o mouse mudar de cor o botao*/
+}
+
+.botao2:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.botao2 i{
+    margin-right: 8px;
+}
+
+.conteiner{
+    margin-left: 30px;
+    margin-bottom: 100px;
+    margin-right: 100px
+}
+.filme-principal .conteiner{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 8px
+}
+
+/*MODAL POPUP*/
+.modal-container{
+    width: 100vw;
+    position: fixed;
+    top: 30px;
+    display: none;
+    z-index: 999;
+    justify-content: center;
+    margin-top: 9cm;
+    margin-left: 0cm;
+    padding: 0;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(rgba(104, 102, 102, 0.5),rgba(119, 117, 117, 0.5)200%);
+    border-radius: 10px;
+    width: 30%;
+    height: 10%;
+}
+.active {
+    display: flex;
+}
+
+.active .modal{
+    animation: modal .4s;
+}
+@keyframes modal{
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+h5 {
+    margin: 10px auto;
+}
+
+footer .rodape{
+    padding: 0;
+    background-color: rgb(70, 70, 70);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+
+}
+
+footer nav a{
+    padding: 5px;
+    text-decoration: none;
+    background-color: #575656;
+    
+    color: aliceblue;
+    ;
+    display: flex;
+    
+    margin-left: 7.4cm;
+    display: inline-block; /*para colocar itens lado a lado*/
+}
+
+footer nav a:hover{
+    color: #f3c0c0;
+}
